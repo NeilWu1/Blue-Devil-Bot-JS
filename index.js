@@ -38,8 +38,16 @@ app.post('/webhook/', function (req, res) {
 				sendGenericMessage(sender)
 				continue
 			}
-			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
-		}
+			if (text === 'food'){
+				sendTextMessage(sender, "Here are the dining options on campus: \n Au Bon Pan \n West Union \n Pitchforks")
+				continue
+			}
+			if (text === 'places'){
+				sendTextMessage(sender, "Here are some of the frequently visited spots on campus: \n Chapel \n Cameron Indoor Stadium \n Wallace Wade Stadium \n CIEMAS \n LSRC \n French Science \n Bio Sci")
+				continue
+			}
+			sendTextMessage(sender, "Hi there! You can type ‘food’ for a list of campus eateries, or, ‘places’ for a list of locations on campus that are frequently asked for.")
+					}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
 			sendTextMessage(sender, "Postback received: "+text.substring(0, 200), token)
@@ -48,6 +56,7 @@ app.post('/webhook/', function (req, res) {
 	}
 	res.sendStatus(200)
 })
+
 
 
 // recommended to inject access tokens as environmental variables, e.g.
