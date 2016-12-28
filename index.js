@@ -38,15 +38,6 @@ app.post('/webhook/', function (req, res) {
 				sendGenericMessage(sender)
 				continue
 			}
-			if (text === 'hi' or 'hello' or 'hey'){
-				sendTextMessage(sender, "Hi there! You can type ‘food’ for a list of campus eateries, or, ‘places’ for a list of locations on campus that are frequently asked for.")
-			}
-			if (text === 'food'){
-				sendTextMessage(sender, "Here are the dining options on campus: \n Au Bon Pan \n West Union \n Pitchforks")
-			}
-			if (text === 'places'){
-				sendTextMessage(sender, "Here are some of the frequently visited spots on campus: \n Chapel \n Cameron Indoor Stadium \n Wallace Wade Stadium \n CIEMAS \n LSRC \n French Science \n Bio Sci")
-			}
 			sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
 		}
 		if (event.postback) {
@@ -60,8 +51,8 @@ app.post('/webhook/', function (req, res) {
 
 
 // recommended to inject access tokens as environmental variables, e.g.
-//const token = process.env.PAGE_ACCESS_TOKEN
-const token = "EAAJzNtZCbWncBAL7yj5UcG21s9jmwPQhxtlsMSwRBZCyQb5R107QrINypp4BzKAxt91j84ERL2vEeESKdXXTZCnq7pFZCilMrqpF3MRvibhBavoqR6FRP84xuaxZC51PDoAKMmE1VRUafEZBB9hayngSIhpKdxl7qV3X9g6gmtbAZDZD"
+const token = process.env.PAGE_ACCESS_TOKEN
+//const token = "<PAGE_ACCESS_TOKEN"
 
 function sendTextMessage(sender, text) {
 	let messageData = { text:text }
