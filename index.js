@@ -22,8 +22,9 @@ app.get('/', function (req, res) {
 app.get('/webhook/', function (req, res) {
 	if (req.query['hub.verify_token'] === 'blue') {
 		res.send(req.query['hub.challenge'])
-	}
-	res.send('Error, wrong token')
+	} else {
+	res.send('Error, wrong token');
+}
 })
 
 // to post data
