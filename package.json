@@ -1,4 +1,6 @@
 {
+  "start": "node index.js",
+
   "name": "blue-devil-bot",
   "version": "1.0.0",
   "description": "Bot for Facebook Messenger, to lend Duke students a helping hand. Built by Neil Wu and Steven Yang.",
