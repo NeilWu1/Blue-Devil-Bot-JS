@@ -39,14 +39,14 @@ app.post('/webhook/', function (req, res) {
 				continue
 			}
 			if (text === 'food'){
-				sendTextMessage(sender, "Here are the dining options on campus: \n Au Bon Pan \n West Union \n Pitchforks")
+				sendTextMessage(sender, "Hungry? Here are a few of the dining options on campus: \n Au Bon Pan \n West Union \n Pitchforks")
 				continue
 			}
 			if (text === 'places'){
-				sendTextMessage(sender, "Here are some of the frequently visited spots on campus: \n Chapel \n Cameron Indoor Stadium \n Wallace Wade Stadium \n CIEMAS \n LSRC \n French Science \n Bio Sci")
+				sendTextMessage(sender, "Looking for somewhere to go? Here are some of the frequently visited spots on campus: \n Chapel \n Perkins Library \n Cameron Indoor Stadium \n Wallace Wade Stadium \n CIEMAS \n LSRC \n French Science \n Bio Sci")
 				continue
 			}
-			sendTextMessage(sender, "Hi there! You can type ‘food’ for a list of campus eateries, or, ‘places’ for a list of locations on campus that are frequently asked for.")
+			sendTextMessage(sender, "Hi there! I'm currently in a very early stage of development, but my humans are working tirelessly to build me more functionality. For now, I'm only programmed to respond if you type 'food' or 'places'.")
 					}
 		if (event.postback) {
 			let text = JSON.stringify(event.postback)
