@@ -1,26 +1,16 @@
 {
-  "start": "node index.js",
-
-  "name": "blue-devil-bot",
+  "name": "secretbots",
   "version": "1.0.0",
-  "description": "Bot for Facebook Messenger, to lend Duke students a helping hand. Built by Neil Wu and Steven Yang.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NeilWu1/Blue-Devil-Bot-JS.git"
-  },
-  "author": "Neil Wu and Steven Yang",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NeilWu1/Blue-Devil-Bot-JS/issues"
-  },
-  "homepage": "https://github.com/NeilWu1/Blue-Devil-Bot-JS#readme",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "request": "^2.79.0"
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "request": "^2.71.0"
   }
 }
