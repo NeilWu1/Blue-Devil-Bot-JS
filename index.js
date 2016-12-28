@@ -14,9 +14,9 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 // index
-app.get('/', function (req, res) {
-	res.send('hello world i am a secret bot')
-})
+// app.get('/', function (req, res) {
+// 	res.send('hello world i am a secret bot')
+// })
 
 // for facebook verification
 app.get('/webhook/', function (req, res) {
